@@ -23,7 +23,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0; i < size; i++) {
             String imagePath = prefs.getString(String.format("myList[%d]", i), "");
+            myList.add(imagePath);
         }
 
         final Context con = this;
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id)
             {
+                Toast.makeText(MainActivity.this, "You did it!", Toast.LENGTH_SHORT).show();
                 // Send File Path to Image Display Activity
                 Intent intent = new Intent(getApplicationContext(), ImageDisplayActivity.class);
                 intent.putExtra("path", myList.get(position));
@@ -72,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        gridview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int position, long arg3) {
+                Toast.makeText(MainActivity.this, "LONG PRESS", Toast.LENGTH_SHORT).show();
+                //set the image as wallpaper
+                return true;
+            }
+        });
 
 
 
