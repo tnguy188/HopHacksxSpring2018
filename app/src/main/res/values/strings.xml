@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">HopHacksxSpring2018</string>
-    <string name="go">GO!</string>
+    <string name="app_name">NoteTaker</string>
+    <string name="go">Take Picture!</string>
+    <string name="low_storage_error">\"Low storage value\"</string>
 </resources>
