@@ -6,21 +6,39 @@
     android:layout_height="match_parent"
     tools:context="com.example.tan.hophacksxspring2018.MainActivity">
 
-    <Button
-        android:id="@+id/cameraButton"
+
+    <!--<RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="171dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
-        android:text="@string/go"
+        android:layout_gravity="bottom" >-->
+    <Button
+        android:id="@+id/savedact"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="79dp"
+
+        android:layout_marginEnd="92dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="64dp"
+        android:text="Saved Projects"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cameraButton"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newact" />
+
+    <Button
+        android:id="@+id/newact"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="264dp"
+        android:text="New Projects"
+        app:layout_constraintBottom_toTopOf="@+id/savedact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
